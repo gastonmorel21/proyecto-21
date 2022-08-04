@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "mochiy pop one", sans-serif;
+}
+
+
+@import "variables.scss";
+
+@import "header.scss";
+
+@import "main.scss";
+
+@import "footer.scss";
+
+/* MEDIA QUERY */
+
+@media screen and (max-width:1150px) {
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    header {
+
+        nav {
+            ul {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+    }
+
+    .bienvenidos {
+        div {
+            h2 {
+                width: 90%;
+            }
+
+            p {
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:850px) {
+
+    .productos {
+
+        .flex {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .galeria {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header {
+        nav {
+            ul {
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .bienvenidos {
+        div {
+            h2 {
+                width: 90%;
+            }
+
+            p {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:542px) {
+
+    .productos {
+
+        .flex {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    header {
+        nav {
+            ul {
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .bienvenidos {
+        div {
+            h2 {
+                width: 90%;
+            }
+
+            p {
+                width: 90%;
+            }
+        }
+    }
+}
+
+/* ANIMACIONES */
+
+header {
+    nav {
+        ul {
+            li {
+                a:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.bienvenidos {
+
+    a:hover {
+        background-color: white;
+        color: black;
+        transform: scale(1.1);
+    }
+}
+
+.tarjetas:hover {
+    transform: scale(1.1);
+}
+
+.tarjetas {
+    a:hover {
+        color: white;
+        background-color: black;
+    }
+}
+
+.grid:hover {
+
+    transform: scale(1.1);
+}
+
+@keyframes move     {
+    0%  {
+        transform: translate(0,-40%);
+        color: white
+    }
+    100%    {
+        transform: translate(0);
+        
+    }
+}
